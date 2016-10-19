@@ -1,0 +1,58 @@
+/* Header --------------------------------- */
+.logo {
+  @extend %text-center;
+}
+
+.tagline {
+  @extend %block;
+
+  color: $white;
+  font-family: 'Hammersmith One', sans-serif;
+  margin-top: 5px;
+}
+
+.list-nav {
+  @include display-flexbox;
+
+  @extend %text-uppercase;
+
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
+  -webkit-justify-content: space-between;
+  justify-content: space-between;
+
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  font-family: 'Hammersmith One', sans-serif;
+  font-weight: normal;
+}
+
+.list-nav-item {
+  @extend %text-center;
+}
+
+@media screen and (min-width:860px) {
+  /* Header ---------- */
+  .flexbox .list-nav,
+  .flexboxtweener .list-nav {
+    -ms-flex-pack: start;
+    -webkit-justify-content: flex-start;
+    justify-content: flex-start; /* back to the default */
+    
+    position: relative; /* you can use positioning with flexbox */
+    top: -70px; /* This is the reason why we have to scope this rule to only apply in flexbox browsers. We don't want the jump up to happen unless flexbox is shoving the items to the edges. */
+  }
+  .flexbox .list-nav-item_home,
+  .flexboxtweener .list-nav-item_home {
+    margin-right:15px;
+  }
+  .flexbox .list-nav-item_tumblr,
+  .flexboxtweener .list-nav-item_tumblr {
+    margin-left:15px;
+  }
+  .flexbox .list-nav-item_party,
+  .flexboxtweener .list-nav-item_party { /* make the break between left and right sides happen before this link */
+    margin-left: auto;
+  }
+}

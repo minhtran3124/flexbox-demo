@@ -1,0 +1,26 @@
+//  color variables
+$white: #fff;
+$yellow: #ffc800;
+
+// background color
+$dark-gray-background: #1c1c1c;
+
+// border color
+$section-border: #878787;
+$description-border: #727272;
+
+
+/* Screen size
+------------------------*/
+//## Define the breakpoints at which your layout will change, adapting to different screen sizes.
+
+// Extra small screen / phone
+$screen-xs: 480px;
+$screen-sm: 640px;
+$screen-sm-max: 768px;
+$screen-md: 960px;
+$screen-lg: 1280px;
+$screen-lg-max: 1920px;
+
+
+// Full HD desktop

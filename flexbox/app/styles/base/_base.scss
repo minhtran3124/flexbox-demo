@@ -1,0 +1,41 @@
+body {
+  margin: 0;
+  padding: 0;
+  background: #d1c2ae;
+  background: hsl(35, 28%, 80%);
+  color: #443526;
+  font-family: 'PT Serif', serif;
+}
+
+article, aside, dialog, figure, footer, header, hgroup, nav, section {
+  display:block;
+}
+
+/* Text */
+h1, h2, h3 {
+  font-family: 'Hammersmith One', sans-serif;
+  font-weight: normal;
+  text-transform: uppercase;
+  text-align: center;
+}
+
+h1 {
+  font-size: 300%;
+  line-height: 1;
+}
+
+a {
+  color: #F0470F;
+}
+
+.wrapper {
+  min-width: 320px;
+  width: 90%;
+  margin: 0 auto;
+}
+
+.intro {
+  margin-bottom: 1.5em;
+  font-size: 125%;
+  line-height: 1.5;
+}

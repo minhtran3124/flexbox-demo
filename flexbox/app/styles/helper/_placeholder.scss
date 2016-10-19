@@ -1,0 +1,93 @@
+/* position
+-------------------------------*/
+%relative {
+  position: relative;
+}
+
+%absolute {
+  position: absolute;
+}
+
+/* text
+-------------------------------*/
+%text-center {
+  text-align: center;
+}
+
+%text-left {
+  text-align: left;
+}
+
+%text-right {
+  text-align: right;
+}
+
+%text-uppercase {
+  text-transform: uppercase;
+}
+
+%text-decoration-none {
+  text-decoration: none;
+}
+
+/* display
+-------------------------------*/
+
+%none {
+  display: none;
+}
+
+%block {
+  display: block;
+}
+
+%inline {
+  display: inline;
+}
+
+%inline-block {
+  display: inline-block;
+}
+
+%visibility-hidden {
+  visibility: hidden;
+}
+
+%visibility-visible {
+  visibility: visible;
+}
+
+
+/* overflow
+-------------------------------*/
+%overflow-hidden {
+  overflow: hidden;
+}
+
+/* background
+-------------------------------*/
+%bg-size-cover {
+  background-size: cover;
+}
+
+%bg-size-contain {
+  background-size: contain;
+}
+
+%bg-no-repeat {
+  background-repeat: no-repeat;
+}
+
+/* Float
+------------------------------*/
+%float-left {
+  float: left;
+}
+
+%float-right {
+  float: right;
+}
+
+.fixed {
+  position: fixed;
+}
