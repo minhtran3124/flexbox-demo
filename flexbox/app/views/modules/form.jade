@@ -1,0 +1,103 @@
+section
+  form.builder(name='form1', method='post', action='')
+    section.builder-component.builder-component_frame
+      h2.builder-component-name Frame
+      ul.ingredients-list
+        li.ingredients-list-item
+          input#frame_0(type='radio', name='frame', value='plain-graham-crackers')
+          label(for='frame_0') graham crackers
+        li.ingredients-list-item
+          input#frame_1(type='radio', name='frame', value='cinnamon-grahams')
+          label(for='frame_1') cinnamon grahams
+        li.ingredients-list-item
+          input#frame_2(type='radio', name='frame', value='chocolate-grahams')
+          label(for='frame_2') chocolate grahams
+        li.ingredients-list-item
+          input#frame_3(type='radio', name='frame', value='fudge-stripe-cookies')
+          label(for='frame_3') Fudge Stripe cookies
+        li.ingredients-list-item
+          input#frame_4(type='radio', name='frame', value='oreos')
+          label(for='frame_4') Oreos
+        li.ingredients-list-item
+          input#frame_5(type='radio', name='frame', value='chocolate-chip-cookies')
+          label(for='frame_5') chocolate chip cookies
+        li.ingredients-list-item
+          input#frame_6(type='radio', name='frame', value='ritz-crackers')
+          label(for='frame_6') Ritz crackers
+        li.ingredients-list-item
+          input#frame_7(type='radio', name='frame', value='other-frame')
+          label#other-frame-label.other-ingredient-label(for='frame_7') other:
+          input#other-frame-name.other-ingredient-field(type='text', name='other-frame-name', aria-labelledby='other-frame-label')
+    section.builder-component.builder-component_marshmallow
+      h2.builder-component-name Marshmallow
+      ul.ingredients-list
+        li.ingredients-list-item
+          input#mallow_0(type='radio', name='mallow', value='plain-marshmallow')
+          label(for='mallow_0') plain marshmallow
+        li.ingredients-list-item
+          input#mallow_1(type='radio', name='mallow', value='chocolate-marshmallow')
+          label(for='mallow_1') chocolate 'mallow
+        li.ingredients-list-item
+          input#mallow_2(type='radio', name='mallow', value='strawberry-marshmallow')
+          label(for='mallow_2') strawberry 'mallow
+        li.ingredients-list-item
+          input#mallow_3(type='radio', name='mallow', value='giant-marshmallow')
+          label(for='mallow_3') giant 'mallow
+        li.ingredients-list-item
+          input#mallow_4(type='radio', name='mallow', value='other-mallow')
+          label#other-mallow-label.other-ingredient-label(for='mallow_4') other:
+          input#other-mallow-name.other-ingredient-field(type='text', name='other-mallow-name', aria-labelledby='other-mallow-label')
+    section.builder-component.builder-component_candy
+      h2.builder-component-name Candy
+      ul.ingredients-list
+        li.ingredients-list-item
+          input#candy_0(type='radio', name='candy', value='hersheys-chocolate')
+          label(for='candy_0') Hershey's chocolate
+        li.ingredients-list-item
+          input#candy_1(type='radio', name='candy', value='dark-chocolate')
+          label(for='candy_1') dark chocolate
+        li.ingredients-list-item
+          input#candy_2(type='radio', name='candy', value='chocolate-with-almonds')
+          label(for='candy_2') chocolate with almonds
+        li.ingredients-list-item
+          input#candy_3(type='radio', name='candy', value='nutella')
+          label(for='candy_3') Nutella
+        li.ingredients-list-item
+          input#candy_4(type='radio', name='candy', value='reeses-peanut-butter-cup')
+          label(for='candy_4') Reese's P.B. Cup
+        li.ingredients-list-item
+          input#candy_5(type='radio', name='candy', value='white-chocolate')
+          label(for='candy_5') white chocolate
+        li.ingredients-list-item
+          input#candy_6(type='radio', name='candy', value='other-candy')
+          label#other-candy-label.other-ingredient-label(for='candy_6') other:
+          input#other-candy-name.other-ingredient-field(type='text', name='other-candy-name', aria-labelledby='other-candy-label')
+    section.builder-component.builder-component_accessories
+      h2.builder-component-name Accessories
+      ul.ingredients-list
+        li.ingredients-list-item
+          input#accessory_0(type='checkbox', name='accessory', value='peanut-butter')
+          label(for='accessory_0') peanut butter
+        li.ingredients-list-item
+          input#accessory_1(type='checkbox', name='accessory', value='banana')
+          label(for='accessory_1') banana
+        li.ingredients-list-item
+          input#accessory_2(type='checkbox', name='accessory', value='strawberries')
+          label(for='accessory_2') strawberries
+        li.ingredients-list-item
+          input#accessory_3(type='checkbox', name='accessory', value='caramel-sauce')
+          label(for='accessory_3') caramel sauce
+        li.ingredients-list-item
+          input#accessory_4(type='checkbox', name='accessory', value='cream-cheese')
+          label(for='accessory_4') cream cheese
+        li.ingredients-list-item
+          input#accessory_5(type='checkbox', name='accessory', value='bacon')
+          label(for='accessory_5') bacon
+        li.ingredients-list-item
+          input#accessory_6(type='checkbox', name='accessory', value='other-accessory')
+          label#other-accessory-label.other-ingredient-label(for='accessory_6') other:
+          input#other-accessory-name.other-ingredient-field(type='text', name='other-accessory-name', aria-labelledby='other-accessory-label')
+    section.builder-action
+      label.builder-action-label(for='smores-name') Name your s'mores:
+      input#smores-name.builder-action-field(type='text', name='smores-name')
+      button#build.builder-action-button(type='submit', name='build') build it
