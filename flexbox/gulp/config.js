@@ -124,6 +124,24 @@ module.exports.copyExtras = {
   }
 };
 
+// Deploy task config
+// FTP settings are in .env file
+module.exports.deploy = {
+  src: dist + '/**',
+  dev: {
+    root: dist,
+    hostname: process.env.FTP_DEV_HOSTNAME,
+    username: process.env.FTP_DEV_USER,
+    destination: process.env.FTP_DEV_DEST
+  },
+  dist: {
+    root: dist,
+    hostname: process.env.FTP_DIST_HOSTNAME,
+    username: process.env.FTP_DIST_USER,
+    destination: process.env.FTP_DIST_DEST
+  }
+};
+
 // Images task config
 module.exports.images = {
   src: path.join(app, images, '**/*.{gif,png,jpg}'),
@@ -196,6 +214,14 @@ module.exports.templates = {
     pretty: true,
     compileDebug: true
   }
+};
+
+// TemplatesData task config
+module.exports.templatesData = {
+  src: path.join(app, views, data, '/**/*.json'),
+  dest: app + '/views',
+  dataName: 'data.json',
+  dataPath: path.join(app, views, 'data.json')
 };
 
 module.exports.useref = {
