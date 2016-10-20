@@ -126,21 +126,21 @@ module.exports.copyExtras = {
 
 // Deploy task config
 // FTP settings are in .env file
-module.exports.deploy = {
-  src: dist + '/**',
-  dev: {
-    root: dist,
-    hostname: process.env.FTP_DEV_HOSTNAME,
-    username: process.env.FTP_DEV_USER,
-    destination: process.env.FTP_DEV_DEST
-  },
-  dist: {
-    root: dist,
-    hostname: process.env.FTP_DIST_HOSTNAME,
-    username: process.env.FTP_DIST_USER,
-    destination: process.env.FTP_DIST_DEST
-  }
-};
+// module.exports.deploy = {
+//   src: dist + '/**',
+//   dev: {
+//     root: dist,
+//     hostname: process.env.FTP_DEV_HOSTNAME,
+//     username: process.env.FTP_DEV_USER,
+//     destination: process.env.FTP_DEV_DEST
+//   },
+//   dist: {
+//     root: dist,
+//     hostname: process.env.FTP_DIST_HOSTNAME,
+//     username: process.env.FTP_DIST_USER,
+//     destination: process.env.FTP_DIST_DEST
+//   }
+// };
 
 // Images task config
 module.exports.images = {
@@ -217,12 +217,12 @@ module.exports.templates = {
 };
 
 // TemplatesData task config
-module.exports.templatesData = {
-  src: path.join(app, views, data, '/**/*.json'),
-  dest: app + '/views',
-  dataName: 'data.json',
-  dataPath: path.join(app, views, 'data.json')
-};
+// module.exports.templatesData = {
+//   src: path.join(app, views, data, '/**/*.json'),
+//   dest: app + '/views',
+//   dataName: 'data.json',
+//   dataPath: path.join(app, views, 'data.json')
+// };
 
 module.exports.useref = {
   src: path.join(app, views, '/**/*.jade'),
@@ -238,8 +238,8 @@ module.exports.useref = {
 module.exports.watch = {
   styles: path.join(app, styles, '/**/*.scss'),
   jade: [
-    path.join(app, views, '/**/*.jade'),
-    path.join(app, views, data, '/**/*.json')
+    path.join(app, views, '/**/*.jade')
+    // path.join(app, views, data, '/**/*.json')
   ],
   scripts: path.join(app, scripts, '/**/*.js'),
   wiredep: 'bower.json'

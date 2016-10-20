@@ -22,7 +22,7 @@ var build = require('./../utils/buildHelper.js');
 
 // Compile jade to html
 
-gulp.task('templates', 'Compile templates', ['templates:prepareData', 'useref'], function() {
+gulp.task('templates', 'Compile templates', ['useref'], function() {
   var src = build.isBuild() ? config.templates.srcBuild : config.templates.src;
   var dest = build.isBuild() ? config.templates.destBuild : config.templates.dest;
   
@@ -30,12 +30,6 @@ gulp.task('templates', 'Compile templates', ['templates:prepareData', 'useref'],
   var languages = config.templates.languages.list.map(function(lang) {
     return gulp.src(src)
       .pipe(plumber(handleError))
-      .pipe(data(function() {
-        var json = JSON.parse(fs.readFileSync(config.templatesData.dataPath));
-        json.language = lang;
-        json.primaryLanguage = config.templates.languages.primary;
-        return json;
-      }))
       .pipe(jade(config.templates.cfg))
       .pipe((config.templates.languages.primary === lang) ? gulp.dest(dest) : gulp.dest(path.join(dest, lang)));
   });
@@ -45,11 +39,11 @@ gulp.task('templates', 'Compile templates', ['templates:prepareData', 'useref'],
 
 // Concat *.json file to single data.json
 
-gulp.task('templates:prepareData', 'Merge views data', function() {
-  return gulp.src(config.templatesData.src)
-    .pipe(extend(config.templatesData.dataName))
-    .pipe(gulp.dest(config.templatesData.dest));
-});
+// gulp.task('templates:prepareData', 'Merge views data', function() {
+//   return gulp.src(config.templatesData.src)
+//     .pipe(extend(config.templatesData.dataName))
+//     .pipe(gulp.dest(config.templatesData.dest));
+// });
 
 // Bundle css and js based on build tags in Jade templates
 
