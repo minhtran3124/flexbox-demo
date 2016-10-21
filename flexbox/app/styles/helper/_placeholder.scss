@@ -1,5 +1,4 @@
-/* position
--------------------------------*/
+// position
 %relative {
   position: relative;
 }
@@ -8,8 +7,7 @@
   position: absolute;
 }
 
-/* text
--------------------------------*/
+// text
 %text-center {
   text-align: center;
 }
@@ -30,9 +28,7 @@
   text-decoration: none;
 }
 
-/* display
--------------------------------*/
-
+// display
 %none {
   display: none;
 }
@@ -57,29 +53,12 @@
   visibility: visible;
 }
 
-
-/* overflow
--------------------------------*/
+// overflow
 %overflow-hidden {
   overflow: hidden;
 }
 
-/* background
--------------------------------*/
-%bg-size-cover {
-  background-size: cover;
-}
-
-%bg-size-contain {
-  background-size: contain;
-}
-
-%bg-no-repeat {
-  background-repeat: no-repeat;
-}
-
-/* Float
-------------------------------*/
+// Float
 %float-left {
   float: left;
 }
