@@ -1,57 +1,47 @@
 .gallery {
+  @extend %text-center;
   margin-left: -20px;
-  text-align: center;
 }
 
 .flexwrap .gallery {
-  display: -ms-flexbox;
-  display: -webkit-flex;
-  display: flex;
-
-  -ms-flex-wrap: wrap;
-  -webkit-flex-wrap: wrap;
-  flex-wrap: wrap;
-
-  -ms-flex-pack: justify;
-  -webkit-justify-content: space-between;
-  justify-content: space-between;
+  @include display-flexbox;
+  @include flex-wrap;
+  @include justify-content;
 }
 
 .gallery-item {
-  display: inline-block;
-  width: 12em;
-  height: 9em;
-  margin: 0 0 20px 20px;
-  padding: 20px;
-  border-radius: 2px;
-  border: 1px solid $english-walnut;
-  border: 1px solid hsl(30,28%,20%);
-  background: $millbrook;
+  @extend %inline-block;
+  @extend %text-center;
+  @include border-radius(2px);
   background: hsl(30,28%,30%);
-  color: $pearl-bush;
+  border: 1px solid hsl(30,28%,20%);
   color: hsl(30,28%,90%);
-  text-align: center;
+  height: 9em;
+  padding: 20px;
+  margin: 0 0 20px 20px;
   vertical-align: top;
+  width: 12em;
 }
 
 .flexwrap .gallery-item {
   -ms-flex: 1 0 200px;
   -webkit-flex: 1 0 200px;
   flex: 1 0 200px;
-
-  width: auto;
   height: auto;
+  width: auto;
 }
+
 .gallery-item:hover {
-  background: $english-walnut;
   background: hsl(30,28%,20%);
   color: $white;
 }
+
 .gallery-item-name {
   margin: 0 0 .5em 0;
 }
+
 .gallery-item-list {
+  list-style: none;
   margin: 0;
   padding: 0;
-  list-style: none;
 }

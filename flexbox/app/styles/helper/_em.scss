@@ -1,6 +1,0 @@
- /* Convert px to em mixin. */
-$base-size: 16;
-
-@function em($value, $currentSize) {
-  @return #{$value / $currentSize}em;
-}

@@ -3,11 +3,10 @@ button {
   @extend %text-center;
   @include border-radius(3px);
 
-  // background: $pomegranate;
   background: hsla(15,88%,50%,1.0);
   border: 1px solid hsla(15,80%,40%,1.0);
-  -webkit-box-shadow: inset 0 0 1px 1px hsla(0,0%,100%,.5);
   box-shadow: inset 0 0 1px 1px hsla(0,0%,100%,.5);
+  -webkit-box-shadow: inset 0 0 1px 1px hsla(0,0%,100%,.5);
   color: $white;
   padding: 12px 20px 14px;
   text-shadow: 0 1px 0 hsla(0,0%,0%,.5);
@@ -32,9 +31,6 @@ button {
 
 input[type='text'] {
   @include border-radius(2px);
-
-  // background: hsl(35,28%,97%);
-  // background: -webkit-linear-gradient(top, hsl(35,28%,90%), $white);
   background: -moz-linear-gradient(top, hsl(35,28%,90%), $white);
   box-shadow: inset 0 0 2px $white;
   border: 1px solid hsl(35,28%,70%);
@@ -51,7 +47,6 @@ input[type='radio'] {
 input[type='checkbox'] + label,
 input[type='radio'] + label {
   @extend %relative;
-
   padding-left: 4px;
 }
 
@@ -69,38 +64,31 @@ input[type='radio'] + label {
   @include display-flexbox;
   @include flex-direction(column);
   @include border-radius(2px);
-
   -ms-flex: 1 1 200px;
   -webkit-flex: 1 1 200px;
-  flex: 1 1 200px;
-
-  margin: 20px 0 20px 20px;
-  padding: 20px;
-
-  // border: 1px solid $pearl-bush;
-  border: 1px solid hsla(0,0%,100%,.3);
-  // background: $pearl-bush-light;
   background: hsla(0,0%,100%,.2);
+  border: 1px solid hsla(0,0%,100%,.3);
+  flex: 1 1 200px;
+  padding: 20px;
+  margin: 20px 0 20px 20px;
 }
 
 .builder-component-name {
   @extend %relative;
-
   margin: 0 0 .5em 0;
   padding: 10px 0 0 0;
-}
 
-.builder-component-name:before {
-  @extend %block;
-  @extend %absolute;
-
-  background-image: url(../images/icons.png);
-  content: '';
-  left: 50%;
-  height: 40px;
-  margin-left: -20px;
-  top: -40px;
-  width: 40px;
+  &:before {
+    @extend %block;
+    @extend %absolute;
+    background-image: url(../images/icons.png);
+    content: '';
+    left: 50%;
+    height: 40px;
+    margin-left: -20px;
+    top: -40px;
+    width: 40px;
+  }
 }
 
 .builder-component_marshmallow .builder-component-name:before {
@@ -118,7 +106,6 @@ input[type='radio'] + label {
 .ingredients-list {
   @include display-flexbox;
   @include flex-direction(column);
-
   -webkit-flex: 1;
   flex: 1;
   list-style: none;
@@ -132,7 +119,6 @@ input[type='radio'] + label {
   &:last-child {
     @include display-flexbox;
     @include flex-align-center;
-
     margin-top: auto;
   }
 }
@@ -209,22 +195,19 @@ input[type='radio'] + label {
     margin: 0 0 0 20px;
   }
 
-  .flexbox .builder-action,
-  .flexboxtweener .builder-action {
-    display: -ms-flexbox;
-    display: -webkit-flex;
-    display: flex;
-
-    -ms-flex-align: stretch;
-    -webkit-align-items: stretch;
-    align-items: stretch;
-
-    margin: 0 0 0 20px;
+  .flexbox,
+  .flexboxtweener {
+    .builder-action {
+      @include display-flexbox;
+      -ms-flex-align: stretch;
+      -webkit-align-items: stretch;
+      align-items: stretch;
+      margin: 0 0 0 20px;
+    }
   }
 
   .builder-action-field {
     display: inline;
-
     margin: 0 10px 0 0;
     width: 20em;
   }
@@ -255,14 +238,18 @@ input[type='radio'] + label {
     clear: left;
   }
 
-  .flexwrap .builder-component {
-    float: none;
-    width: auto;
+  .flexwrap {
+    .builder-component {
+      float: none;
+      width: auto;
+    }
   }
 }
 
 @media screen and (min-width:1200px) {
-  .flexwrap .builder-component {
-    max-width: 14em;
+  .flexwrap {
+    .builder-component {
+      max-width: 14em;
+    }
   }
 }

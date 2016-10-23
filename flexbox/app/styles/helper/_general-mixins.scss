@@ -1,44 +1,3 @@
-// @mixin uppercase-title($font-size) {
-//   color: $yellow;
-//   font-size: $font-size;
-//   text-transform: uppercase;
-//   font-family: $bebasNeue;
-//   font-weight: normal;
-// }
-
-// @mixin normal-text($font-size, $font-style) {
-//   color: $white;
-//   font-size: $font-size;
-//   font-family: $verdana;
-//   font-style: $font-style;
-// }
-
-// @mixin uppercase-text($font-size, $font-style) {
-//   color: $yellow;
-//   font-size: $font-size;
-//   text-transform: uppercase;
-//   font-family: $verdana;
-//   font-weight: bold;
-//   font-style: $font-style;
-// }
-
-// @mixin background-parallax {
-//   background-attachment: fixed;
-//   background-size: cover;
-//   background-repeat: no-repeat;
-//   background-position: 50% 50%;
-// }
-
-@mixin size($width, $height) {
-  width: $width;
-  height: $height;
-}
-
-@mixin square($size) {
-  width: $size;
-  height: $size;
-}
-
 @mixin opacity($opacity) {
   opacity: $opacity;
   // IE8 filter
@@ -82,6 +41,12 @@
   -ms-flex-direction: $position;
   -webkit-flex-direction: $position;
   flex-direction: $position;
+}
+
+@mixin flex-order($position) {
+  -ms-flex-order: $position;
+  -webkit-order: $position;
+  order: $position;
 }
 
 @mixin flex-align-center {
